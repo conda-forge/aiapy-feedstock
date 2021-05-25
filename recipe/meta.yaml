@@ -1,5 +1,5 @@
 {% set name = "aiapy" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aiapy-{{ version }}.tar.gz
-  sha256: e359b2b897bdcc5b34b53e24828f9695be5b64f8deb7d3e6983fae101e074fbe
+  sha256: 0c70303741b15134e400d6b8159d6bdcb84dde61a3ef6c1148db7b63ec678856
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
   run:
     - importlib_resources
     - python >=3.6
-    - sunpy >=2.0
+    - sunpy >=2.0,<=3.0
 
 test:
   requires:
