@@ -1,11 +1,11 @@
-About aiapy
-===========
+About aiapy-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aiapy-feedstock/blob/main/LICENSE.txt)
 
 Home: https://gitlab.com/LMSAL_HUB/aia_hub/aiapy
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aiapy-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python package for AIA analysis.
 
