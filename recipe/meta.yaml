@@ -1,5 +1,5 @@
 {% set name = "aiapy" %}
-{% set version = "0.7.2.post1" %}
+{% set version = "0.7.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aiapy-{{ version }}.tar.gz
-  sha256: ce6b8e66a46886bc12706e28583abeb54f6e26704f81032adef3772aa4c8da51
+  sha256: e6c4fab8769ae904284ab89f419bc6ba3d776f3d581fcebe9e2be31e1727527f
 
 build:
   number: 0
