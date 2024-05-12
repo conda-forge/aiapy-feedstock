@@ -18,12 +18,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.10
     - setuptools_scm
   run:
     - importlib_resources
-    - python >=3.8
-    - sunpy >=4.0.4
+    - python >=3.10
+    - sunpy >=5.0.0
 
 test:
   requires:
