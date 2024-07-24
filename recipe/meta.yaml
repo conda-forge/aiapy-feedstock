@@ -1,5 +1,5 @@
 {% set name = "aiapy" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aiapy-{{ version }}.tar.gz
-  sha256: aa8e85ced38641f10e7cfa91ee302184a0736ef247f0bbc926d24997db9065ce
+  sha256: 27f7cd1b43ea1bab8aa8f14b81d0017e1c5935c3294c24bf082091a494f4b81a
 
 build:
   number: 0
@@ -21,20 +21,19 @@ requirements:
     - python >=3.10
     - setuptools_scm
   run:
-    - importlib_resources
     - python >=3.10
-    - sunpy >=5.0.0
+    - sunpy >=6.0.0
+    - packaging
+    - drms
+    - astropy
+    - numpy
+    - pyerfa
+    - parfive
 
 test:
   requires:
     - pip
     - pytest-astropy
-  imports:
-    - aiapy
-    - aiapy.calibrate
-    - aiapy.psf
-    - aiapy.response
-    - aiapy.util
   commands:
     - pytest --pyargs aiapy --remote-data=any
 
