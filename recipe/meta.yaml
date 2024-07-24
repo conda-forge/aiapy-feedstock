@@ -35,7 +35,7 @@ test:
     - pip
     - pytest-astropy
   commands:
-    - pytest --pyargs aiapy --remote-data=none
+    - pytest --pyargs aiapy --remote-data=any
 
 about:
   home: https://gitlab.com/LMSAL_HUB/aia_hub/aiapy
