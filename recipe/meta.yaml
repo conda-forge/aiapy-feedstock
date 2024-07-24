@@ -21,20 +21,13 @@ requirements:
     - python >=3.10
     - setuptools_scm
   run:
-    - importlib_resources
     - python >=3.10
-    - sunpy >=5.0.0
+    - sunpy >=6.0.0
 
 test:
   requires:
     - pip
     - pytest-astropy
-  imports:
-    - aiapy
-    - aiapy.calibrate
-    - aiapy.psf
-    - aiapy.response
-    - aiapy.util
   commands:
     - pytest --pyargs aiapy --remote-data=any
 
