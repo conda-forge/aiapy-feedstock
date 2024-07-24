@@ -23,13 +23,19 @@ requirements:
   run:
     - python >=3.10
     - sunpy >=6.0.0
+    - packaging
+    - drms
+    - astropy
+    - numpy
+    - pyerfa
+    - parfive
 
 test:
   requires:
     - pip
     - pytest-astropy
   commands:
-    - pytest --pyargs aiapy --remote-data=any
+    - pytest --pyargs aiapy --remote-data=none
 
 about:
   home: https://gitlab.com/LMSAL_HUB/aia_hub/aiapy
