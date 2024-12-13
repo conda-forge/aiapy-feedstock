@@ -1,41 +1,43 @@
 {% set name = "aiapy" %}
 {% set version = "0.9.1" %}
-
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aiapy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aiapy-{{ version }}.tar.gz
   sha256: ac25c4a2cbb2e364982daa7aab224b549f49aad4a43fe6f7e7291e265299f994
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.10
+    - python {{ python_min }}
+    - setuptools
     - setuptools_scm
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - sunpy >=6.0.0
     - packaging
     - drms
-    - astropy
+    - astropy-base
     - numpy
     - pyerfa
     - parfive
 
 test:
   requires:
+    - python {{ python_min }}
     - pip
     - pytest-astropy
   commands:
-    - pytest --pyargs aiapy --remote-data=any
+    - pytest --pyargs aiapy --remote-data=none
 
 about:
   home: https://gitlab.com/LMSAL_HUB/aia_hub/aiapy
