@@ -1,6 +1,6 @@
 {% set name = "aiapy" %}
 {% set version = "0.11.0" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
